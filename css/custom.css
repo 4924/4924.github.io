@@ -7,6 +7,27 @@
 }
 body {
 	padding-top: 3em;
-	padding-bottom: 4em;
+	padding-bottom: 0em;
+
+}
+.navbar-static-bottom {
+    border-radius: 0;
+    z-index: 1000;
+    border-width: 0 0 1px;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 20px 0 0;
+}
+hr {
+
+    height: 2px;
+
+    background-color:#555;
+
+    margin-top: 20px;
+
+    margin-bottom: 20px;
+
+    width: 75%;
 
 }
