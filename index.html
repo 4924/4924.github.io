@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="BootstrapBay.com">
+    <meta name="author" content="">
     <title>STEM Robotics</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
@@ -32,10 +32,10 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teams <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Mechanical</a></li>
-                <li><a href="#">Electrical</a></li>
-                <li><a href="#">Business & Branding</a></li>
-                <li><a href="#">Programming</a></li>
+                <li><a href="#mechanical">Mechanical</a></li>
+                <li><a href="#electrical">Electrical</a></li>
+                <li><a href="#business">Business & Branding</a></li>
+                <li><a href="#programming">Programming</a></li>
               </ul>
             </li>
             <li><a href="#">Sponsors</a></li>            
@@ -48,20 +48,39 @@
     <div class="container">
 
       <div class="row">
-      <div class="col-sm-4">
-        <h3 id="about">About</h3>
-        <p>stuff</p>
-      </div>
-      <div class="col-sm-4">
-        <h3></h3>
-        <p></p>
-      </div>
-      <div class="col-sm-4">
-        <h3></h3>
-        <p></p>
+      <div class="col-sm-10">
+        <h3>STEM School Robotics</h3>
+        <p>
+          Welcome to the official website for the STEM School robotics team. Our school's mission is to develop and share a new paradigm for world-class education using technology and as a gateway to cultivate student's inquisitive nature, excerisise innovation, think critically, and collaborate to become leaders who are self sufficent, with the passion of Chattanooga's Renaissance. Through STEM Robotics, students gain a passion to learn, everlasting ability to excersise leadership, and work their minds to come up with innovative and unique ideas. 
+        </p>
       </div>
     </div>
-
+    <div class="row">
+      <div class="col-md-5">
+        <h3 id="mechanical" class="anchor">Mechanical Team</h3>
+        <p>
+          The mechanical team assembles the body of the robot, on which the other parts are attached. They use our state of the art FABLAB to assemble all the various moving parts that go into making our robots functional, as well as keeping the pneumatics functioning.
+        </p>
+      </div>  
+      <div class="col-md-5">
+        <h3 id="electrical" class="anchor">Electrical Team</h3>
+        <p>
+          The electrical team works with supplying power to the robots. They plug in and organize all the wires that keep the robots functioning, as well as troubleshooting when things go wrong. Our electrical team members also create and wire the electrical panel, and works with pneumatics.
+        </p>
+      </div>  
+      <div class="col-md-5">
+        <h3 id="business" class="anchor">Business & Branding Team</h3>
+        <p>
+          The business and branding team works to provide the STEM School Robotics team with a public face. The business and branding team members also create the team’s promotional materials, as well as reaching out to and securing sponsors to provide the majority of the teams budget. The business and branding team also keeps purchase records, as well as
+        </p>
+      </div> 
+      <div class="col-md-5">
+        <h3 id="programming" class="anchor">Programming Team</h3>
+        <p>
+          The programming team does magic.
+        </p>
+      </div> 
+    </div>
     </div> 
 
     <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
@@ -81,5 +100,12 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+    $(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') ) {
+        $(this).collapse('hide');
+      }
+    });
+    </script>
   </body>
 </html>
