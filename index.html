@@ -31,18 +31,18 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#">Home</a></li>       
-            <li><a href="#about">About</a></li>
-            <li><a href="#upcoming">Upcoming</a></li>
+            <li><a href="#" data-scroll="about">About</a></li>
+            <li><a href="#" data-scroll="upcoming">Upcoming</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teams <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#mechanical">Mechanical</a></li>
-                <li><a href="#electrical">Electrical</a></li>
-                <li><a href="#business">Business & Branding</a></li>
-                <li><a href="#programming">Programming</a></li>
+                <li><a  href="#" data-scroll="mechanical">Mechanical</a></li>
+                <li><a href="#" data-scroll="electrical">Electrical</a></li>
+                <li><a href="#" data-scroll="business">Business & Branding</a></li>
+                <li><a href="#" data-scroll="programming">Programming</a></li>
               </ul>
             </li>
-            <li><a href="#sponsors">Sponsors</a></li>            
+            <li><a href="#" data-scroll="sponsors">Sponsors</a></li>            
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -69,11 +69,44 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
+
+    $('.nav a').on('click', function() {
+    console.log("click");
+    $('.nav li.active').removeClass('active');
+    $(this).parent().addClass('active');
+    var scrollAnchor = $(this).attr('data-scroll'),
+        scrollPoint = $('div[data-anchor="' + scrollAnchor + '"]').offset().top - 28;
+
+    $('body,html').animate({
+        scrollTop: scrollPoint
+    }, 500);
+
+    })
+
     $(document).on('click','.navbar-collapse.in',function(e) {
     if( $(e.target).is('a') ) {
         $(this).collapse('hide');
       }
     });
+
+    $(window).scroll(function() {
+    var windscroll = $(window).scrollTop();
+    if (windscroll >= 100) {
+        $('#anchor').each(function(i) {
+            if ($(this).position().top <= windscroll - 20) {
+                $('nav a.active').removeClass('active');
+                $('nav a').eq(i).addClass('active');
+            }
+        });
+
+    } else {
+
+        $('nav a.active').removeClass('active');
+        $('nav a:first').addClass('active');
+    }
+
+}).scroll();
+
     </script>
   </body>
 </html>
