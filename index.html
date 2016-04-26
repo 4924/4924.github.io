@@ -10,9 +10,13 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/ui-router.min.js"></script>
+    <script src="js/app.js"></script>
   </head>
-  <body>
+  <body ng-app="robotics">
     <!-- Fixed navbar -->
+
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -39,93 +43,17 @@
               </ul>
             </li>
             <li><a href="#sponsors">Sponsors</a></li>            
-            <li><a href="#">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
-    <div class="container">
-
-
-      <div class="row">
-        <h2 id="about" class="anchor" style="text-align: center;">STEM School Robotics</h2>
-        <div class="col-sm-10">
-            <p>
-            Welcome to the official website for the STEM School robotics team. Our school's mission is to develop and share a new paradigm for world-class education using technology and as a gateway to cultivate student's inquisitive nature, excerisise innovation, think critically, and collaborate to become leaders who are self sufficent, with the passion of Chattanooga's Renaissance. Through STEM Robotics, students gain a passion to learn, everlasting ability to excersise leadership, and work their minds to come up with innovative and unique ideas. 
-            </p>
-        </div>
-      </div>
-
-
-      <hr>
-  
-  
-      <div class="row">
-        <h2 id="upcoming" class="anchor" style="text-align: center;">Upcoming Events</h2>
-        <div class="col-sm-10">
-          <p>
-            Is this nessesary 
-          </p>
-        </div>
-      </div>
-
-
-      <hr>
-
-
-      <div class="row">
-        <h2 style="text-align: center;">Teams</h2>
-        <div class="col-sm-4">
-          <h3 id="mechanical" class="anchor">Mechanical Team</h3>
-          <p>
-          The mechanical team assembles the body of the robot, on which the other parts are attached. They use our state of the art FABLAB to assemble all the various moving parts that go into making our robots functional, as well as keeping the pneumatics functioning.(fix)
-          </p>
-        </div>  
-        <div class="col-sm-4">
-          <h3 id="electrical" class="anchor">Electrical Team</h3>
-          <p>
-          The electrical team works with supplying power to the robots. They plug in and organize all the wires that keep the robots functioning, as well as troubleshooting when things go wrong. Our electrical team members also create and wire the electrical panel, and works with pneumatics.(fix)
-          </p>
-        </div>  
-        <div class="col-sm-4">
-          <h3 id="business" class="anchor">Business & Branding Team</h3>
-          <p>
-          The business and branding team works to provide the STEM School Robotics team with a public face. The business and branding team members also create the team’s promotional materials, as well as reaching out to and securing sponsors to provide the majority of the teams budget. The business and branding team also keeps purchase records, as well as(fix)
-          </p>
-        </div> 
-        <div class="col-sm-4">
-          <h3 id="programming" class="anchor">Programming Team</h3>
-          <p>
-          The programming team writes all of our robot code.(fix)
-          </p>
-        </div> 
-      </div>
-    
-      <hr>
-
-      <div class="row">
-        <h2 id="sponsors" class="anchor" style="text-align: center;">Sponsors</h2>
-        <div class="col-sm-4">
-          <h3>EPB</h3>
-        </div>
-        <div class="col-sm-4">
-          <h3>TVA</h3>
-        </div>
-        <div class="col-sm-4">
-          <h3>Sonic</h3>
-        </div>
-        <div class="col-sm-4">
-          <h3>???</h3>
-        </div>
-      </div>
-
-
-    </div> 
+    <ui-view></ui-view>
 
     <div class="navbar navbar-inverse navbar-static-bottom" role="navigation">
       <div class="container">
-        <div class="navbar-text pull-left">
+        <div class="navbar-text pull-left" style="font-weight: thin;">
+          Contact Us
         </div>
         <div class="navbar-text pull-right">
           <a href="https://twitter.com/STEMpythons"><i class="fa fa-twitter-square fa-2x"></i></a>
