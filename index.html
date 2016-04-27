@@ -70,7 +70,8 @@
     <script src="js/bootstrap.min.js"></script>
     <script>
 
-    $('.nav a').on('click', function() {
+    $('.nav a').on('click', function(event) {
+    event.preventDefault();
     console.log("click");
     $('.nav li.active').removeClass('active');
     $(this).parent().addClass('active');
@@ -92,17 +93,18 @@
     $(window).scroll(function() {
     var windscroll = $(window).scrollTop();
     if (windscroll >= 100) {
-        $('#anchor').each(function(i) {
-            if ($(this).position().top <= windscroll - 20) {
-                $('nav a.active').removeClass('active');
-                $('nav a').eq(i).addClass('active');
+        $('.place').each(function(i) {
+            console.log($(this).attr('data-anchor'));
+            if ($(this).position().top <= windscroll + 80) {
+                $('.nav li.active').removeClass('active');
+                $('.nav li a[data-scroll="'+$(this).attr('data-anchor')+'"]').parent('li').addClass('active');
             }
         });
 
     } else {
 
-        $('nav a.active').removeClass('active');
-        $('nav a:first').addClass('active');
+        $('.nav li.active').removeClass('active');
+        $('.nav li:first').addClass('active');
     }
 
 }).scroll();
