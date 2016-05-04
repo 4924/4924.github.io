@@ -99,7 +99,7 @@
         $('.place').each(function(i) {
             console.log($(this).attr('data-anchor'));
             if ($(this).position().top <= windscroll + 80) {
-              if($(this).attr('data-anchor')=="mechanical"||$(this).attr('data-anchor')=="electrical"||$(this).attr('data-anchor')=="business"||$(this).attr('data-anchor')=="programming") {
+              if($(this).attr('data-anchor')=="teams"||$(this).attr('data-anchor')=="mechanical"||$(this).attr('data-anchor')=="electrical"||$(this).attr('data-anchor')=="business"||$(this).attr('data-anchor')=="programming") {
                 $('.nav li.active').removeClass('active');
                 $('.dropdown').addClass('active');
               } else {
