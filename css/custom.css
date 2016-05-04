@@ -1,3 +1,7 @@
+html *{
+   font-family: 'Roboto Condensed' !important;
+}
+
 .navbar-text > a {
 	color: inherit;
 	text-decoration: none;
@@ -19,15 +23,21 @@ body {
     margin: 20px 0 0;
 }
 hr {
-
     height: 2px;
-
-    background-color:#555;
-
+    background-color:#595959;
     margin-top: 20px;
-
     margin-bottom: 20px;
+    width: 30%;
+}
 
-    width: 75%;
+.navbar-default .navbar-nav > .active > a{
+    background-color: #45add3 !important;
+}
 
+h2 {
+    color: #595959;
+}
+
+h3 {
+    color: #006633;
 }

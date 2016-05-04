@@ -7,6 +7,7 @@
     <meta name="description" content="Team 4924 Website">
     <meta name="author" content="Me">
     <title>STEM Robotics</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -18,7 +19,7 @@
     <!-- Fixed navbar -->
 
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
+      <div class="container navbar-inner">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -26,13 +27,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">STEM School Robotics</a>
+        <a class="navbar-brand" href="#">STEM School Robotics</a>
         </div>
         <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Home</a></li>       
-            <li><a href="#" data-scroll="about">About</a></li>
+          <ul class="nav navbar-nav nav-pills navbar-right">
+            <li class="active"><a href="#" data-scroll="home"s>Home</a></li>       
             <li><a href="#" data-scroll="upcoming">Upcoming</a></li>
+
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teams <b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -42,12 +43,13 @@
                 <li><a href="#" data-scroll="programming">Programming</a></li>
               </ul>
             </li>
+
             <li><a href="#" data-scroll="sponsors">Sponsors</a></li>            
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
-
+    
     <ui-view></ui-view>
 
     <div class="navbar navbar-inverse navbar-static-bottom" role="navigation">
