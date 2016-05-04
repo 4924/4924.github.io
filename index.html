@@ -77,8 +77,11 @@
     console.log("click");
     $('.nav li.active').removeClass('active');
     $(this).parent().addClass('active');
-    var scrollAnchor = $(this).attr('data-scroll'),
-        scrollPoint = $('div[data-anchor="' + scrollAnchor + '"]').offset().top - 28;
+    if($(this).attr('data-scroll')=="home") {
+      scrollPoint = 0; 
+    } else {
+      var scrollAnchor = $(this).attr('data-scroll'), scrollPoint = $('div[data-anchor="' + scrollAnchor + '"]').offset().top - 28;
+    }
 
     $('body,html').animate({
         scrollTop: scrollPoint
