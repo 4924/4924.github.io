@@ -34,7 +34,7 @@
             <li ><a href="#" data-scroll="home">Home</a></li>
             <li><a href="#" data-scroll="about">About</a></li>       
             <li><a href="#" data-scroll="upcoming">Upcoming</a></li>
-            <li class="dropdown active">
+            <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teams <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a  href="#" data-scroll="mechanical">Mechanical</a></li>
@@ -75,8 +75,6 @@
     $('.nav a').on('click', function(event) {
     event.preventDefault();
     console.log("click");
-    $('.nav li.active').removeClass('active');
-    $(this).parent().addClass('active');
     if($(this).attr('data-scroll')=="home") {
       scrollPoint = 0; 
     } else {
@@ -101,8 +99,13 @@
         $('.place').each(function(i) {
             console.log($(this).attr('data-anchor'));
             if ($(this).position().top <= windscroll + 80) {
+              if($(this).attr('data-anchor')=="mechanical"||$(this).attr('data-anchor')=="electrical"||$(this).attr('data-anchor')=="business"||$(this).attr('data-anchor')=="programming") {
+                $('.nav li.active').removeClass('active');
+                $('.dropdown').addClass('active');
+              } else {
                 $('.nav li.active').removeClass('active');
                 $('.nav li a[data-scroll="'+$(this).attr('data-anchor')+'"]').parent('li').addClass('active');
+              }
             }
         });
 
