@@ -2,6 +2,15 @@ html *{
    font-family: 'Roboto Condensed' !important;
 }
 
+.jumbotron {
+    position: relative;
+    background: #000 url("jumbotron-bg.jpg") center center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+}
+
 .navbar-text > a {
 	color: inherit;
 	text-decoration: none;
