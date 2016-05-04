@@ -50,3 +50,9 @@ h2 {
 h3 {
     color: #006633;
 }
+
+.thumbnail{        
+    width: 30%; 
+    height: 30%;
+    overflow: auto;
+}
