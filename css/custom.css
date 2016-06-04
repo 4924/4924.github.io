@@ -29,7 +29,7 @@ BODY {
 	padding-top: 2.3em; margin-top: -2em;
 }
 body {
-	padding-top: 6em;
+	padding-top: 5em;
 	padding-bottom: 0em;
 
 }
@@ -70,9 +70,20 @@ h3 {
     color: #006633;
 }
 
-.thumbnail{
+.thumbnail>img{
     width: 60%;
-    height: 60%;
-    margin: auto;
-    overflow: auto;
+    height: 50%;
+    display: inline-block;
+    float: none;
+}
+.image-responsive{
+  width: 40%;
+  height: 30%;
+  float: none;
+  align-items: center;
+  display: inline-block;
+}
+
+.thumb{
+  text-align: center;
 }
