@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Team 4924 Website">
-    <meta name="author" content="Me">
+    <meta name="author" content="4924">
     <title>STEM Robotics</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -33,20 +33,20 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right navbar-text">
-            <li><a href="#" data-scroll="home">Home</a></li>
-            <li><a href="#" data-scroll="about">About</a></li>
-            <li><a href="#" data-scroll="upcoming">Upcoming</a></li>
+            <li><a href="#/home" data-scroll="home">Home</a></li>
+            <li><a href="#/about" data-scroll="about">About</a></li>
+            <li><a href="#/upcoming" data-scroll="upcoming">Upcoming</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teams <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a  href="#" data-scroll="mechanical">Mechanical</a></li>
-                <li><a href="#" data-scroll="electrical">Electrical</a></li>
-                <li><a href="#" data-scroll="business">Business & Branding</a></li>
-                <li><a href="#" data-scroll="programming">Programming</a></li>
+                <li><a  href="#/teams" data-scroll="mechanical">Mechanical</a></li>
+                <li><a href="#/teams" data-scroll="electrical">Electrical</a></li>
+                <li><a href="#/teams" data-scroll="business">Business & Branding</a></li>
+                <li><a href="#/teams" data-scroll="programming">Programming</a></li>
               </ul>
             </li>
 
-            <li><a href="#" data-scroll="sponsors">Sponsors</a></li>
+            <li><a href="#/sponsors" data-scroll="sponsors">Sponsors</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -57,7 +57,7 @@
     <div class="navbar navbar-inverse navbar-static-bottom" role="navigation">
       <div class="container">
         <div class="navbar-text pull-left" style="font-weight: thin;">
-          <a href="https://twitter.com/STEMpythons"> Contact Us</a>
+          <a href="https://notawebsite.com"> Contact Us</a>
         </div>
         <div class="navbar-text pull-right">
           <a href="https://twitter.com/STEMpythons"><i class="fa fa-twitter-square fa-2x"></i></a>
@@ -72,54 +72,5 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-
-    $('.nav a').on('click', function(event) {
-    event.preventDefault();
-    console.log("click");
-    if($(this).attr('data-scroll')=="home") {
-      scrollPoint = 0;
-    } else {
-      var scrollAnchor = $(this).attr('data-scroll'), scrollPoint = $('div[data-anchor="' + scrollAnchor + '"]').offset().top - 28;
-    }
-
-    $('body,html').animate({
-        scrollTop: scrollPoint
-    }, 500);
-
-    })
-
-    $(document).on('click','.navbar-collapse.in',function(e) {
-    if( $(e.target).is('a') ) {
-        $(this).collapse('hide');
-      }
-    });
-
-    $(window).scroll(function() {
-    var windscroll = $(window).scrollTop();
-    if (windscroll >= 100) {
-        $('.place').each(function(i) {
-            if ($(this).position().top <= windscroll + 80) {
-              if($(this).attr('data-anchor')=="teams"||$(this).attr('data-anchor')=="mechanical"||$(this).attr('data-anchor')=="electrical"||$(this).attr('data-anchor')=="business"||$(this).attr('data-anchor')=="programming") {
-                $('.nav li.active').removeClass('active');
-                $('.dropdown').addClass('active');
-                console.log($(this).attr('data-anchor'));
-              } else {
-                $('.nav li.active').removeClass('active');
-                $('.nav li a[data-scroll="'+$(this).attr('data-anchor')+'"]').parent('li').addClass('active');
-                console.log($(this).attr('data-anchor'));
-              }
-            }
-        });
-
-    } else {
-
-        $('.nav li.active').removeClass('active');
-        $('.nav li:first').addClass('active');
-    }
-
-}).scroll();
-
-    </script>
   </body>
 </html>
