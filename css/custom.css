@@ -16,8 +16,11 @@ BODY {
 	color: white !important;
 	text-decoration: none;
   font-size: 4em;
-  line-height: normal;
+}
 
+.navbar-text {
+  line-height: normal;
+}
 }
 
 .navbar-text > li > a{
@@ -26,12 +29,9 @@ BODY {
   font-weight: bold;
 }
 
-.navbar-fixed-top {
-  height:14em;
-}
 
 .place{
-	padding-top: 2.3em; margin-top: -2em;
+	padding-top: 1.5em; margin-top: -2em;
 }
 
 body {
